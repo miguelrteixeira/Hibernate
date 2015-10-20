@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- Hibernate connection configuration -->
+		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/teixeira</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">12345</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        
+        <!-- SQL statements are presented in Console -->
+        <property name="hibernate.show_sql">true</property>
+        
+        <!-- Options: create, create-drop, update, validate -->
+        <!-- create: creates a new table everytime we run the application and previous values are replaced by the new ones; 
+        	 create-drop: same as create but when we close sessionFactory the table is dropped
+        	 update:
+        	-->
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        
+        <!-- Classes managed by Hibernate -->
+        <mapping class="pt.teixeira.model.Student"></mapping>        
+        
+	</session-factory>
+</hibernate-configuration>
