@@ -57,14 +57,6 @@ public class Student {
 	}
 
 	/* Getters and Setters */
-	public int getId() {
-		return Id;
-	}
-
-	public void setId(int id) {
-		Id = id;
-	}
-
 	public String getStudentName() {
 		return studentName;
 	}
